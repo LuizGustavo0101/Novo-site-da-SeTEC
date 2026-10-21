@@ -1,0 +1,632 @@
+$roxoEscuro: #351a4a;
+$roxoNormal: #6d33a2;
+$roxoPoucoClaro: #7a3fb0;
+$roxoPoucoEscuro:#3a1367;
+$amarelo: #ffe800;
+$amareloPastel: #fdef92;
+$corfundo: #F4ECFA;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap');
+
+@mixin botao{
+    padding: 8px 26px;
+    border-radius: 5rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: $roxoPoucoEscuro;
+    background-color: $amarelo;
+
+    &:hover {
+        cursor: pointer;
+        filter: brightness(90%);
+        transform: scale(1.1);
+        transition: .3s;
+    }
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+*{
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    -webkit-user-drag: none;
+    font-family: 'Montserrat', sans-serif ;
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 72px;
+}
+
+$espacamentoPadraoEsquerda: 10rem;
+$espacamentoPadraoEsquerdaTablet: 5rem;
+$espacamentoPadraoDireita: 7rem;
+$espacamentoPadraoDireitaTablet: 2rem;
+$tamanhoHeader: 70px;
+header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: $roxoPoucoEscuro;
+    color: white;
+    height: $tamanhoHeader;
+    z-index: 1;
+
+    #logoHeader {
+        position: relative;
+        img {
+            height: 40px;
+            width: 65px;
+                
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    #conteudoHeader {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+
+        ul {
+            display: flex;
+
+            li {
+                display: flex;
+                text-transform: uppercase;
+                list-style: none;
+                padding: 0px 20px;
+                font-size: 14px;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                    position: relative;
+                    padding-bottom: 5px;
+
+                    &:hover {
+                        transform: scale(1.15);
+                        transition: .3s ease-in;
+
+                        &::after{
+                            transform: scaleX(1);
+                        }
+                    }
+
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background-color: $amarelo;
+                        transform: scaleX(0);
+                        transform-origin: left; 
+                        transition: transform 0.3s ease;
+                    }
+                }
+            }
+        }
+
+        button {
+            margin-left: 4rem;
+            @include botao;
+        }
+    }
+    
+    #hamburguerMenu {
+        display: none;
+        position: relative;
+        width: 60px;
+        height: 60px;
+
+        .checkbox-toggle {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 3;
+            cursor: pointer;
+            width: 60px;
+            height: 60px;
+            opacity: 0;
+        
+            &:checked {
+                & + .hamburger {
+                    > div {
+                        transform: rotate(135deg);
+                        
+                        &:before,
+                        &:after {
+                            top: 0;
+                            transform: rotate(90deg);
+                        }
+                        
+                        &:after {
+                            opacity: 0;
+                        }
+                    }
+                }
+                
+                & ~ .menu {
+                    pointer-events: auto;
+                    visibility: visible;
+                    
+                    > div {
+                        transform: scale(1);
+                        transition-duration: 0.75s;
+                        
+                        > div {
+                            opacity: 1;
+                            transition: opacity .4s ease .4s;
+                        }
+                    }
+                }
+            }
+        
+            &:checked:hover + .hamburger > div {
+                transform: rotate(225deg);
+            }
+        }
+        
+        .hamburger {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1;
+            width: 40px;
+            height: 40px;
+            padding: 0.5em 1em; 
+            border-radius: 0 .12em .12em 0;
+            cursor: pointer;
+            transition: box-shadow .4s ease;
+            backface-visibility: hidden;
+            @include flex-center;
+        
+            > div {
+                position: relative;
+                flex: none;
+                width: 100%;
+                height: 2px;
+                background: white;
+                transition: all .4s ease;
+                @include flex-center;
+                
+                &:before,
+                &:after {
+                    content: '';
+                    position: absolute;
+                    z-index: 1;
+                    top: -10px; // 60px / 6
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    background: inherit;
+                    transition: all 2px ease;
+                }
+                
+                &:after {
+                    top: 10px; // 60px / 6
+                }
+            }
+        }
+
+        .menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            visibility: hidden;
+            overflow: hidden;
+            backface-visibility: hidden;
+            outline: 1px solid transparent;
+            @include flex-center;
+        
+            > div {
+                width: 300vw;
+                height: 300vw;
+                color: white;
+                background: $roxoPoucoEscuro;
+                border-radius: 50%;
+                transition: all .4s ease;
+                flex: none;
+                transform: scale(0);
+                backface-visibility: hidden;
+                overflow: hidden;
+                @include flex-center;
+                flex-direction: column;
+
+                .hamb_logo {
+                    margin-top: -2rem;
+                    margin-bottom: 3rem;
+                    img {
+                        width: 50%;
+                    }
+                }
+                
+                > div {
+                    flex-direction: column;
+                    text-align: center;
+                    max-width: 90vw;
+                    max-height: 100vh;
+                    opacity: 0;
+                    transition: opacity .4s ease;
+                    overflow-y: auto;
+                    @include flex-center;
+                    
+                    > ul {
+                        list-style: none;
+                        padding: 0 1em;
+                        margin: 0;
+                        display: block;
+                        max-height: 100vh;
+                        
+                        > li {
+                            padding: 0;
+                            margin: 1em;
+                            font-size: 24px;
+                            display: block;
+                        
+                            > a {
+                                text-decoration: none;
+                                position: relative;
+                                display: inline;
+                                cursor: pointer;
+                                transition: color .4s ease;
+                                color: white;
+                                font-weight: 600;
+                                letter-spacing: 1.1px;
+                                
+                                &:hover { 
+                                    color: $amarelo;
+                                    
+                                    &:after {
+                                        width: 100%;
+                                    }
+                                }
+                                
+                                &:after {
+                                    content: '';
+                                    position: absolute;
+                                    z-index: 1;
+                                    bottom: -0.15em;
+                                    left: 0;
+                                    width: 0;
+                                    height: 2px;
+                                    background: $amarelo;
+                                    transition: width .4s ease;
+                                }
+                            }
+                        }
+                    }
+
+                    button{
+                        width: 60%;
+                        font-size: 18px;
+                        @include botao;
+                    }
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 768px) {
+        justify-content: space-between;
+        
+        #hamburguerMenu{
+            position: relative;
+            right: 0;
+            display: block;
+        }
+    }
+}
+
+#fundoPopup1{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 4;
+
+    .popupInscricao{
+        background-color: white;
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 30px 30px;
+        border-radius: 20px;
+
+        .fecharPopupInscricao{
+            position: absolute;
+            margin: -8.5rem 0px 0px 13.5rem;
+            justify-content: end;
+            color: black;
+            width: 20px;
+            height: 20px;
+            border-radius: 100px;
+            background-color: transparent;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+
+            &:hover{
+                color: red;
+            }
+        }
+
+        p{
+            text-align: center;
+        }
+
+        .abrirInsta{
+            background-color: $amarelo;
+            padding: 10px 20px;
+            border-radius: 100px;
+            color: $roxoEscuro;
+            font-weight: bold;
+            cursor: pointer;
+
+            &:hover{
+                transform: scale(1.1);
+                transition: .5s;
+            }
+        }
+    }
+}
+
+#fundoPopup2{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 4;
+
+    .popupInscricao{
+        background-color: white;
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 30px 30px;
+        border-radius: 20px;
+
+        .fecharPopupInscricao{
+            position: absolute;
+            margin: -14.5rem 0px 0px 13.5rem;
+            justify-content: end;
+            color: black;
+            width: 20px;
+            height: 20px;
+            border-radius: 100px;
+            background-color: transparent;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+
+            &:hover{
+                color: red;
+            }
+        }
+
+        p{
+            text-align: center;
+        }
+
+        .abrirInsta{
+            background-color: $amarelo;
+            padding: 10px 20px;
+            border-radius: 100px;
+            color: $roxoEscuro;
+            font-weight: bold;
+            cursor: pointer;
+
+            &:hover{
+                transform: scale(1.1);
+                transition: .5s;
+            }
+        }
+    }
+}
+
+
+
+footer {
+    background-color: $roxoEscuro;
+    width: 100%;
+    box-sizing: border-box;
+
+    .rodape {
+        width: 100%;
+        max-width: 1440px;
+        min-height: 165px;
+        box-sizing: border-box;
+
+        margin: 0 auto;
+        padding: 30px 12.5%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+
+        .container1 {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 100px;
+
+            flex: 1;
+            min-width: 0;
+
+            .logoFooter {
+                display: flex;
+                align-items: center;
+                flex-shrink: 0;
+                cursor: pointer;
+
+                img {
+                    display: block;
+                    width: 75px;
+                    height: auto;
+                    max-width: 100%;
+                }
+            }
+
+            .redesSociais {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 18px;
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+                    transition: transform 0.3s ease;
+
+                    img {
+                        display: block;
+                        width: 30px;
+                        height: 30px;
+                        object-fit: contain;
+                    }
+
+                    &:hover {
+                        transform: scale(1.15);
+                    }
+                }
+            }
+        }
+
+        .container2 {
+            flex-shrink: 0;
+            text-align: left;
+
+            label {
+                display: inline-block;
+                color: white;
+                font-weight: 400;
+                letter-spacing: 0;
+                font-size: 12px;
+                line-height: 1.7;
+            }
+        }
+    }
+
+    // Tablets
+    @media (max-width: 1000px) {
+        .rodape {
+            padding: 30px 6%;
+            gap: 30px;
+
+            .container1 {
+                gap: 40px;
+            }
+
+            .container2 {
+                label {
+                    font-size: 11px;
+                    white-space: normal;
+                }
+            }
+        }
+    }
+
+    // Celulares
+    @media (max-width: 650px) {
+        .rodape {
+            min-height: auto;
+            padding: 35px 24px;
+
+            flex-direction: column;
+            justify-content: center;
+            gap: 28px;
+
+            .container1 {
+                flex: initial;
+                width: 100%;
+                justify-content: center;
+                gap: 45px;
+
+                .logoFooter {
+                    img {
+                        width: 100px;
+                    }
+                }
+
+                .redesSociais{
+                    gap: 20px;
+
+                    a img {
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+            }
+
+            .container2 {
+                width: 100%;
+                text-align: center;
+
+                label {
+                    font-size: 11px;
+                    white-space: normal;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1000px) {
+    header{
+        display: flex;
+        justify-content: baseline;
+        padding: 0px 20px 0px $espacamentoPadraoEsquerdaTablet;
+
+        #conteudoHeader{
+            button{
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media (max-width:425px) {
+    header{
+        #logoHeader{
+            margin: 0px auto;
+        }
+    }
+}
