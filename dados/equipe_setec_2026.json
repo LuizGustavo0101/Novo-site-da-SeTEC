@@ -1,0 +1,165 @@
+{
+    "gestao2026":{
+        "ano": 2026,
+        "equipe": [{
+            "geral": {
+                "coordenacao": {
+                    "1": {
+                        "Nome": "Sara Gomes",
+                        "img": "./assets/imagens/Carometro/geral/imgSaraBarbosa.jpg"
+                    },
+                    "2": {
+                        "Nome": "Tiago Barbosa",
+                        "img": "./assets/imagens/Carometro/geral/imgTiago.jpg"
+                    }
+                },
+                "analistas": {}
+            },
+            "comercial": {
+                "coordenacao": {
+                    "1": {
+                        "Nome": "Clarisse",
+                        "img": "./assets/imagens/Carometro/comercial/imgClarisse.jpg"
+                    },
+                    "2": {
+                        "Nome": "Lucas",
+                        "img": "./assets/imagens/Carometro/comercial/imgLucas.jpg"
+                    }
+                },
+                "analistas": {
+                    "1": {
+                        "Nome": "Luis Otávio",
+                        "img": "./assets/imagens/Carometro/comercial/imgLuisOtavio.jpg"
+                    },
+                    "2": {
+                        "Nome": "Pedro Dias",
+                        "img": "./assets/imagens/Carometro/comercial/imgPedroDias.jpg"
+                    },
+                    "3": {
+                        "Nome": "Pedro Müller",
+                        "img": "./assets/imagens/Carometro/comercial/imgPedroMuller.jpg"
+                    }
+                }
+            },
+            "marketing": {
+                "coordenacao": {
+                    "1": {
+                        "Nome": "João Pedro",
+                        "img": "./assets/imagens/Carometro/marketing/imgJoao.jpg"
+                    },
+                    "2": {
+                        "Nome": "Luiz",
+                        "img": "./assets/imagens/Carometro/marketing/imgLuiz.jpg"
+                    },
+                    "3": {
+                        "Nome": "Murilo",
+                        "img": "./assets/imagens/Carometro/marketing/imgMurilo.jpg"
+                    }
+                },
+                "analistas": {
+                    "1": {
+                        "Nome": "Agatha",
+                        "img": "./assets/imagens/Carometro/marketing/imgAgatha.jpg"
+                    },
+                    "2": {
+                        "Nome": "Hugo",
+                        "img": "./assets/imagens/Carometro/marketing/imgHugo.jpg"
+                    },
+                    "3": {
+                        "Nome": "Isabela",
+                        "img": "./assets/imagens/Carometro/marketing/imgIsabela.jpg"
+                    },
+                    "4": {
+                        "Nome": "Leonardo",
+                        "img": "./assets/imagens/Carometro/marketing/imgLeonardo.jpg"
+                    },
+                    "5": {
+                        "Nome": "Victor",
+                        "img": "./assets/imagens/Carometro/marketing/imgVictor.jpg"
+                    }
+                }
+            },
+            "redesECultura": {
+                "coordenacao": {
+                    "1": {
+                        "Nome": "Laura",
+                        "img": "./assets/imagens/Carometro/redes/imgLaura.jpg"
+                    }
+                },
+                "analistas": {
+                    "1": {
+                        "Nome": "Bruno",
+                        "img": "./assets/imagens/Carometro/redes/imgBruno.jpg"
+                    },
+                    "2": {
+                        "Nome": "Ezequiel",
+                        "img": "./assets/imagens/Carometro/redes/imgEzequiel.jpg"
+                    },
+                    "3": {
+                        "Nome": "Isabella Carvalho",
+                        "img": "./assets/imagens/Carometro/redes/imgIsabelaCarvalho.jpg"
+                    },
+                    "4": {
+                        "Nome": "João Pedro",
+                        "img": "./assets/imagens/Carometro/redes/imgPerfeitinha.jpg"
+                    },
+                    "5": {
+                        "Nome": "Maria Luiza",
+                        "img": "./assets/imagens/Carometro/redes/imgMaria.jpg"
+                    },
+                    "6": {
+                        "Nome": "Pedro Mendes",
+                        "img": "./assets/imagens/Carometro/redes/imgPedroMendes.jpg"
+                    }
+                }
+            },
+            "infraestrutura": {
+                "coordenacao": {
+                    "1": {
+                        "Nome": "João Paulo",
+                        "img": "./assets/imagens/Carometro/infraestrutura/imgJota.jpg"
+                    }
+                },
+                "analistas": {
+                    "1": {
+                        "Nome": "João Marcos",
+                        "img": "./assets/imagens/Carometro/infraestrutura/imgJoaoMarcos.jpg"
+                    },
+                    "2": {
+                        "Nome": "Kauan",
+                        "img": "./assets/imagens/Carometro/infraestrutura/imgKauan.jpg"
+                    },
+                    "3": {
+                        "Nome": "Nicolas",
+                        "img": "./assets/imagens/Carometro/infraestrutura/imgNicolas.jpg"
+                    },
+                    "4": {
+                        "Nome": "Rian",
+                        "img": "./assets/imagens/Carometro/infraestrutura/imgRian.jpg"
+                    },
+                    "5": {
+                        "Nome": "Sara Magrini",
+                        "img": "./assets/imagens/Carometro/infraestrutura/imgSara.jpg"
+                    },
+                    "6": {
+                        "Nome": "Sarah de Almeida",
+                        "img": "./assets/imagens/Carometro/infraestrutura/imgSarah.jpg"
+                    }
+                }
+            },
+            "financeiro": {
+                "coordenacao": {
+                    "1": {
+                        "Nome": "Gustavo",
+                        "img": "./assets/imagens/Carometro/financeiro/imgGustavo.png"
+                    },
+                    "2": {
+                        "Nome": "João Paulo",
+                        "img": "./assets/imagens/Carometro/financeiro/imgJota.jpg"
+                    }
+                },
+                "analistas": {}
+            }
+        }]
+    }
+}

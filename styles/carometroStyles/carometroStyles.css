@@ -1,0 +1,847 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap");
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+  -webkit-user-drag: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 72px;
+}
+
+header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #3a1367;
+  color: white;
+  height: 70px;
+  z-index: 4;
+}
+header #logoHeader {
+  position: relative;
+}
+header #logoHeader img {
+  height: 40px;
+  width: 65px;
+}
+header #logoHeader img:hover {
+  cursor: pointer;
+}
+header #conteudoHeader {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  header #conteudoHeader {
+    display: none;
+  }
+}
+header #conteudoHeader ul {
+  display: flex;
+}
+header #conteudoHeader ul li {
+  display: flex;
+  text-transform: uppercase;
+  list-style: none;
+  padding: 0px 20px;
+  font-size: 14px;
+}
+header #conteudoHeader ul li a {
+  text-decoration: none;
+  color: white;
+  position: relative;
+  padding-bottom: 5px;
+}
+header #conteudoHeader ul li a:hover {
+  transform: scale(1.15);
+  transition: 0.3s ease-in;
+}
+header #conteudoHeader ul li a:hover::after {
+  transform: scaleX(1);
+}
+header #conteudoHeader ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ffe800;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+header #conteudoHeader button {
+  margin-left: 4rem;
+  padding: 8px 26px;
+  border-radius: 5rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #3a1367;
+  background-color: #ffe800;
+}
+header #conteudoHeader button:hover {
+  cursor: pointer;
+  filter: brightness(90%);
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+header #hamburguerMenu {
+  display: none;
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+header #hamburguerMenu .checkbox-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  opacity: 0;
+}
+header #hamburguerMenu .checkbox-toggle:checked + .hamburger > div {
+  transform: rotate(135deg);
+}
+header #hamburguerMenu .checkbox-toggle:checked + .hamburger > div:before, header #hamburguerMenu .checkbox-toggle:checked + .hamburger > div:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+header #hamburguerMenu .checkbox-toggle:checked + .hamburger > div:after {
+  opacity: 0;
+}
+header #hamburguerMenu .checkbox-toggle:checked ~ .menu {
+  pointer-events: auto;
+  visibility: visible;
+}
+header #hamburguerMenu .checkbox-toggle:checked ~ .menu > div {
+  transform: scale(1);
+  transition-duration: 0.75s;
+}
+header #hamburguerMenu .checkbox-toggle:checked ~ .menu > div > div {
+  opacity: 1;
+  transition: opacity 0.4s ease 0.4s;
+}
+header #hamburguerMenu .checkbox-toggle:checked:hover + .hamburger > div {
+  transform: rotate(225deg);
+}
+header #hamburguerMenu .hamburger {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  padding: 0.5em 1em;
+  border-radius: 0 0.12em 0.12em 0;
+  cursor: pointer;
+  transition: box-shadow 0.4s ease;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header #hamburguerMenu .hamburger > div {
+  position: relative;
+  flex: none;
+  width: 100%;
+  height: 2px;
+  background: white;
+  transition: all 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header #hamburguerMenu .hamburger > div:before, header #hamburguerMenu .hamburger > div:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+  transition: all 2px ease;
+}
+header #hamburguerMenu .hamburger > div:after {
+  top: 10px;
+}
+header #hamburguerMenu .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  visibility: hidden;
+  overflow: hidden;
+  backface-visibility: hidden;
+  outline: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header #hamburguerMenu .menu > div {
+  width: 300vw;
+  height: 300vw;
+  color: white;
+  background: #3a1367;
+  border-radius: 50%;
+  transition: all 0.4s ease;
+  flex: none;
+  transform: scale(0);
+  backface-visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+header #hamburguerMenu .menu > div .hamb_logo {
+  margin-top: -2rem;
+  margin-bottom: 3rem;
+}
+header #hamburguerMenu .menu > div .hamb_logo img {
+  width: 50%;
+}
+header #hamburguerMenu .menu > div > div {
+  flex-direction: column;
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  overflow-y: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header #hamburguerMenu .menu > div > div > ul {
+  list-style: none;
+  padding: 0 1em;
+  margin: 0;
+  display: block;
+  max-height: 100vh;
+}
+header #hamburguerMenu .menu > div > div > ul > li {
+  padding: 0;
+  margin: 1em;
+  font-size: 24px;
+  display: block;
+}
+header #hamburguerMenu .menu > div > div > ul > li > a {
+  text-decoration: none;
+  position: relative;
+  display: inline;
+  cursor: pointer;
+  transition: color 0.4s ease;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 1.1px;
+}
+header #hamburguerMenu .menu > div > div > ul > li > a:hover {
+  color: #ffe800;
+}
+header #hamburguerMenu .menu > div > div > ul > li > a:hover:after {
+  width: 100%;
+}
+header #hamburguerMenu .menu > div > div > ul > li > a:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: -0.15em;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #ffe800;
+  transition: width 0.4s ease;
+}
+header #hamburguerMenu .menu > div > div button {
+  width: 60%;
+  font-size: 18px;
+  padding: 8px 26px;
+  border-radius: 5rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #3a1367;
+  background-color: #ffe800;
+}
+header #hamburguerMenu .menu > div > div button:hover {
+  cursor: pointer;
+  filter: brightness(90%);
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+@media (max-width: 768px) {
+  header {
+    justify-content: space-between;
+  }
+  header #hamburguerMenu {
+    position: relative;
+    right: 0;
+    display: block;
+  }
+}
+
+#fundoPopup1 {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+}
+#fundoPopup1 .popupInscricao {
+  background-color: white;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 30px 30px;
+  border-radius: 20px;
+}
+#fundoPopup1 .popupInscricao .fecharPopupInscricao {
+  position: absolute;
+  margin: -8.5rem 0px 0px 13.5rem;
+  justify-content: end;
+  color: black;
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+}
+#fundoPopup1 .popupInscricao .fecharPopupInscricao:hover {
+  color: red;
+}
+#fundoPopup1 .popupInscricao p {
+  text-align: center;
+}
+#fundoPopup1 .popupInscricao .abrirInsta {
+  background-color: #ffe800;
+  padding: 10px 20px;
+  border-radius: 100px;
+  color: #351a4a;
+  font-weight: bold;
+  cursor: pointer;
+}
+#fundoPopup1 .popupInscricao .abrirInsta:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+#fundoPopup2 {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+}
+#fundoPopup2 .popupInscricao {
+  background-color: white;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 30px 30px;
+  border-radius: 20px;
+}
+#fundoPopup2 .popupInscricao .fecharPopupInscricao {
+  position: absolute;
+  margin: -14.5rem 0px 0px 13.5rem;
+  justify-content: end;
+  color: black;
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+}
+#fundoPopup2 .popupInscricao .fecharPopupInscricao:hover {
+  color: red;
+}
+#fundoPopup2 .popupInscricao p {
+  text-align: center;
+}
+#fundoPopup2 .popupInscricao .abrirInsta {
+  background-color: #ffe800;
+  padding: 10px 20px;
+  border-radius: 100px;
+  color: #351a4a;
+  font-weight: bold;
+  cursor: pointer;
+}
+#fundoPopup2 .popupInscricao .abrirInsta:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+#section1 {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  margin-top: 70px;
+  position: relative;
+  overflow: hidden;
+}
+#section1 #titulo {
+  margin-top: -1px;
+}
+#section1 #titulo .containerTitulo {
+  padding: 1rem 7rem 20px 11rem;
+  flex: 1;
+  background-color: #3a1367;
+}
+#section1 #titulo .containerTitulo .barraAmarela {
+  width: 30px;
+  height: 2px;
+  background-color: #ffe800;
+  margin: 30px 0px 20px 0px;
+  transform: scale(2) translateX(7px);
+  height: 2px;
+}
+#section1 #titulo .containerTitulo h4 {
+  font-size: 20px;
+  margin-top: -10px;
+}
+#section1 #titulo .containerTitulo h2 {
+  font-size: 34px;
+  color: white;
+}
+#section1 #titulo .containerTitulo h2 span {
+  color: #ffe800;
+}
+#section1 #titulo .containerTitulo p {
+  color: white;
+  line-height: 22px;
+  margin-top: 5px;
+}
+#section1 #titulo .containerTitulo button {
+  padding: 8px 26px;
+  border-radius: 5rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #3a1367;
+  background-color: #ffe800;
+}
+#section1 #titulo .containerTitulo button:hover {
+  cursor: pointer;
+  filter: brightness(90%);
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+#section1 #titulo .containerTitulo button {
+  margin-top: 15px;
+}
+#section1 #titulo .containerTitulo button img {
+  width: 10px;
+  margin-left: 10px;
+}
+#section1 #titulo .curvaCima {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+#section1 #titulo .curvaCima svg {
+  display: block;
+  width: 100%;
+  height: 100px;
+}
+#section1 #seletorGestao {
+  padding-top: 2rem;
+  z-index: 1;
+}
+#section1 #seletorGestao .seletorAnos {
+  padding: 0rem 7rem 20px 11rem;
+  display: flex;
+  gap: 10px;
+  color: #3a1367;
+  font-weight: bold;
+  align-items: center;
+}
+#section1 #seletorGestao .seletorAnos label {
+  flex-shrink: 0;
+}
+#section1 #seletorGestao .seletorAnos .containerAnos {
+  display: flex;
+  gap: 20px;
+}
+#section1 #seletorGestao .seletorAnos .containerAnos button {
+  border-radius: 10rem;
+  padding: 6px 30px;
+  color: #3a1367;
+  font-weight: 500;
+}
+#section1 #seletorGestao .seletorAnos .containerAnos button:hover {
+  cursor: pointer;
+}
+#section1 #seletorGestao .seletorAnos .containerAnos .ativo {
+  background-color: #ffe800;
+  border-bottom: 1px solid #3a1367;
+  font-weight: bold;
+}
+#section1 #seletorGestao .seletorAnos .containerAnos .desativo {
+  border: 1px solid #3a1367;
+  background-color: transparent;
+}
+#section1 #seletorGestao .containerCoordenacao {
+  padding: 0rem 7rem 20px 11rem;
+  display: flex;
+  flex-direction: column;
+}
+#section1 #seletorGestao .containerCoordenacao h4 {
+  font-weight: bold;
+  color: #3a1367;
+  font-size: 24px;
+}
+#section1 #seletorGestao .containerCoordenacao .barraAmarela {
+  width: 30px;
+  height: 2px;
+  background-color: #ffe800;
+  margin: 30px 0px 20px 0px;
+  transform: scale(2) translateX(10px);
+  width: 40px;
+  height: 2px;
+  margin: 10px 0 30px 0;
+}
+#section1 #seletorGestao .containerCoordenacao .cardCoordenacao {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+#section1 #seletorGestao .containerCoordenacao .cardCoordenacao button {
+  flex: 1 1 250px;
+  border-radius: 10px;
+  padding: 15px 20px;
+  color: #3a1367;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+#section1 #seletorGestao .containerCoordenacao .cardCoordenacao button:hover {
+  cursor: pointer;
+}
+#section1 #seletorGestao .containerCoordenacao .cardCoordenacao button div {
+  background-color: #3a1367;
+  border-radius: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 10px;
+}
+#section1 #seletorGestao .containerCoordenacao .cardCoordenacao button div img {
+  width: 25px;
+  height: 25px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#section1 #seletorGestao .containerCoordenacao .cardCoordenacao button p {
+  font-size: 16px;
+}
+#section1 #seletorGestao .containerCoordenacao .cardCoordenacao button img {
+  width: 14px;
+  margin-left: auto;
+}
+#section1 #seletorGestao .containerCoordenacao .cardCoordenacao .ativo {
+  background-color: #ffe800;
+  border-bottom: 1px solid #3a1367;
+  font-weight: bold;
+}
+#section1 #seletorGestao .containerCoordenacao .cardCoordenacao .desativo {
+  border: 1px solid #3a1367;
+  background-color: transparent;
+}
+
+#section2 {
+  background-color: #F4ECFA;
+}
+#section2 #coordenacao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0px 50px 0px;
+}
+#section2 #coordenacao .parteTexto {
+  text-align: center;
+}
+#section2 #coordenacao .parteTexto h4 {
+  color: #3a1367;
+  font-weight: bold;
+  font-size: 24px;
+}
+#section2 #coordenacao .parteTexto p {
+  color: #3a1367;
+  margin-top: 4px;
+}
+#section2 #coordenacao .pessoas {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#section2 #coordenacao .pessoas .coordenadores, #section2 #coordenacao .pessoas .analistas {
+  border: 1px solid rgba(58, 19, 103, 0.3764705882);
+  padding: 15px 20px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#section2 #coordenacao .pessoas .coordenadores .textoCoordenacao, #section2 #coordenacao .pessoas .coordenadores .textoAnalistas, #section2 #coordenacao .pessoas .analistas .textoCoordenacao, #section2 #coordenacao .pessoas .analistas .textoAnalistas {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#section2 #coordenacao .pessoas .coordenadores .textoCoordenacao .containerTextoCoordenacao, #section2 #coordenacao .pessoas .coordenadores .textoCoordenacao .containerTextoAnalistas, #section2 #coordenacao .pessoas .coordenadores .textoAnalistas .containerTextoCoordenacao, #section2 #coordenacao .pessoas .coordenadores .textoAnalistas .containerTextoAnalistas, #section2 #coordenacao .pessoas .analistas .textoCoordenacao .containerTextoCoordenacao, #section2 #coordenacao .pessoas .analistas .textoCoordenacao .containerTextoAnalistas, #section2 #coordenacao .pessoas .analistas .textoAnalistas .containerTextoCoordenacao, #section2 #coordenacao .pessoas .analistas .textoAnalistas .containerTextoAnalistas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  background-color: #3a1367;
+  border-radius: 2rem;
+}
+#section2 #coordenacao .pessoas .coordenadores .textoCoordenacao .containerTextoCoordenacao img, #section2 #coordenacao .pessoas .coordenadores .textoCoordenacao .containerTextoAnalistas img, #section2 #coordenacao .pessoas .coordenadores .textoAnalistas .containerTextoCoordenacao img, #section2 #coordenacao .pessoas .coordenadores .textoAnalistas .containerTextoAnalistas img, #section2 #coordenacao .pessoas .analistas .textoCoordenacao .containerTextoCoordenacao img, #section2 #coordenacao .pessoas .analistas .textoCoordenacao .containerTextoAnalistas img, #section2 #coordenacao .pessoas .analistas .textoAnalistas .containerTextoCoordenacao img, #section2 #coordenacao .pessoas .analistas .textoAnalistas .containerTextoAnalistas img {
+  width: 20px;
+}
+#section2 #coordenacao .pessoas .coordenadores .textoCoordenacao h5, #section2 #coordenacao .pessoas .coordenadores .textoAnalistas h5, #section2 #coordenacao .pessoas .analistas .textoCoordenacao h5, #section2 #coordenacao .pessoas .analistas .textoAnalistas h5 {
+  font-weight: bold;
+  color: #3a1367;
+  font-size: 18px;
+}
+#section2 #coordenacao .pessoas .coordenadores .cardImagensCoord, #section2 #coordenacao .pessoas .coordenadores .cardImagensAnalista, #section2 #coordenacao .pessoas .analistas .cardImagensCoord, #section2 #coordenacao .pessoas .analistas .cardImagensAnalista {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+#section2 #coordenacao .pessoas .coordenadores .cardImagensCoord .card, #section2 #coordenacao .pessoas .coordenadores .cardImagensAnalista .card, #section2 #coordenacao .pessoas .analistas .cardImagensCoord .card, #section2 #coordenacao .pessoas .analistas .cardImagensAnalista .card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  max-width: 100px;
+}
+#section2 #coordenacao .pessoas .coordenadores .cardImagensCoord .card .fotoPessoas img, #section2 #coordenacao .pessoas .coordenadores .cardImagensAnalista .card .fotoPessoas img, #section2 #coordenacao .pessoas .analistas .cardImagensCoord .card .fotoPessoas img, #section2 #coordenacao .pessoas .analistas .cardImagensAnalista .card .fotoPessoas img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+#section2 #coordenacao .pessoas .coordenadores .cardImagensCoord .card .informacoes, #section2 #coordenacao .pessoas .coordenadores .cardImagensAnalista .card .informacoes, #section2 #coordenacao .pessoas .analistas .cardImagensCoord .card .informacoes, #section2 #coordenacao .pessoas .analistas .cardImagensAnalista .card .informacoes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 20px;
+  border-radius: 10px;
+  margin-top: -20px;
+  background-color: #ffe800;
+}
+#section2 #coordenacao .pessoas .coordenadores .cardImagensCoord .card .informacoes label, #section2 #coordenacao .pessoas .coordenadores .cardImagensAnalista .card .informacoes label, #section2 #coordenacao .pessoas .analistas .cardImagensCoord .card .informacoes label, #section2 #coordenacao .pessoas .analistas .cardImagensAnalista .card .informacoes label {
+  font-weight: bold;
+  color: #3a1367;
+  font-size: 12px;
+}
+#section2 #coordenacao .pessoas .coordenadores .cardImagensCoord .card .informacoes p, #section2 #coordenacao .pessoas .coordenadores .cardImagensAnalista .card .informacoes p, #section2 #coordenacao .pessoas .analistas .cardImagensCoord .card .informacoes p, #section2 #coordenacao .pessoas .analistas .cardImagensAnalista .card .informacoes p {
+  color: #3a1367;
+  font-size: 10px;
+}
+#section2 #coordenacao .pessoas .coordenadores .cardImagensCoord .card:hover, #section2 #coordenacao .pessoas .coordenadores .cardImagensAnalista .card:hover, #section2 #coordenacao .pessoas .analistas .cardImagensCoord .card:hover, #section2 #coordenacao .pessoas .analistas .cardImagensAnalista .card:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: 0.4s;
+  box-shadow: 0 0 10px 1px #7a3fb0;
+}
+
+footer {
+  background-color: #351a4a;
+  width: 100%;
+  box-sizing: border-box;
+}
+footer .rodape {
+  width: 100%;
+  max-width: 1440px;
+  min-height: 165px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 30px 12.5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+footer .rodape .container1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 100px;
+  flex: 1;
+  min-width: 0;
+}
+footer .rodape .container1 .logoFooter {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+footer .rodape .container1 .logoFooter img {
+  display: block;
+  width: 75px;
+  height: auto;
+  max-width: 100%;
+}
+footer .rodape .container1 .redesSociais {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 18px;
+}
+footer .rodape .container1 .redesSociais a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+footer .rodape .container1 .redesSociais a img {
+  display: block;
+  width: 30px;
+  height: 30px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+footer .rodape .container1 .redesSociais a:hover {
+  transform: scale(1.15);
+}
+footer .rodape .container2 {
+  flex-shrink: 0;
+  text-align: left;
+}
+footer .rodape .container2 label {
+  display: inline-block;
+  color: white;
+  font-weight: 400;
+  letter-spacing: 0;
+  font-size: 12px;
+  line-height: 1.7;
+}
+@media (max-width: 1000px) {
+  footer .rodape {
+    padding: 30px 6%;
+    gap: 30px;
+  }
+  footer .rodape .container1 {
+    gap: 40px;
+  }
+  footer .rodape .container2 label {
+    font-size: 11px;
+    white-space: normal;
+  }
+}
+@media (max-width: 650px) {
+  footer .rodape {
+    min-height: auto;
+    padding: 35px 24px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 28px;
+  }
+  footer .rodape .container1 {
+    flex: initial;
+    width: 100%;
+    justify-content: center;
+    gap: 45px;
+  }
+  footer .rodape .container1 .logoFooter img {
+    width: 100px;
+  }
+  footer .rodape .container1 .redesSociais {
+    gap: 20px;
+  }
+  footer .rodape .container1 .redesSociais a img {
+    width: 40px;
+    height: 40px;
+  }
+  footer .rodape .container2 {
+    width: 100%;
+    text-align: center;
+  }
+  footer .rodape .container2 label {
+    font-size: 11px;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 1000px) {
+  header {
+    display: flex;
+    justify-content: baseline;
+    padding: 0px 20px 0px 5rem;
+  }
+  header #conteudoHeader button {
+    margin: 0;
+  }
+  section #titulo .containerTitulo {
+    padding: 1rem 7rem 20px 7rem;
+  }
+  section #seletorGestao .seletorAnos {
+    padding: 0rem calc(7rem - 0px) 20px 7rem;
+    flex-direction: column;
+    align-items: baseline;
+  }
+  section #seletorGestao .seletorAnos .containerAnos {
+    padding: 10px 0px 0px 20px;
+    flex-wrap: wrap;
+  }
+  section #seletorGestao .seletorAnos .containerAnos button {
+    flex: 0 1 90px;
+  }
+  section #seletorGestao .containerCoordenacao {
+    padding: 0rem calc(7rem - 0px) 20px 7rem;
+  }
+}
+@media (max-width: 425px) {
+  header #logoHeader {
+    margin: 0px auto;
+  }
+  section #titulo .containerTitulo {
+    padding: 1rem 30px 20px 5rem;
+  }
+  section #seletorGestao .seletorAnos {
+    padding: 1rem 7rem 20px 5rem;
+  }
+  section #seletorGestao .containerCoordenacao {
+    padding: 1rem 7rem 20px 5rem;
+  }
+}/*# sourceMappingURL=carometroStyles.css.map */

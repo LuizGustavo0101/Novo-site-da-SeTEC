@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SeTEC | Semana Temática da Engenharia Civil - Poli USP</title>
+        <meta name="description" content="A Semana Temática de Engenharia Civil (SeTEC) é organizada pelo CEC Poli-USP, reunindo palestras, workshops, visitas técnicas e feira de recrutamento.">
+        <meta name="keywords" content="SeTEC, Engenharia Civil, Poli USP, CEC Poli USP, feira de recrutamento, eventos engenharia, workshops">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="Centro Acadêmico de Engenharia Civil - Poli USP">
+        <link rel="canonical" href="https://www.setecpoli.com.br/">
+        <link rel="icon" type="image/png" href="./assets/imagens/logo_setec_roxa.png">
+        <link rel="apple-touch-icon" href="./assets/imagens/logo_setec_roxa.png">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://www.setecpoli.com.br/">
+        <meta property="og:title" content="SeTEC | Semana Temática da Engenharia Civil - Poli USP">
+        <meta property="og:description" content="Conectando estudantes, profissionais e empresas para construir o futuro. Participe da Semana Temática da Engenharia Civil da Poli USP.">
+        <meta property="og:image" content="https://www.setecpoli.com.br/assets/imagens/logo_setec_roxa.png">
+        <meta property="og:locale" content="pt_BR">
+        <meta property="og:site_name" content="SeTEC Poli USP">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="SeTEC | Semana Temática da Engenharia Civil - Poli USP">
+        <meta name="twitter:description" content="Conectando estudantes, profissionais e empresas para construir o futuro. Participe da Semana Temática da Engenharia Civil da Poli USP.">
+        <meta name="twitter:image" content="https://www.setecpoli.com.br/assets/imagens/logo_setec_roxa.png">
+
+        <link rel="stylesheet" href="./styles/carometroStyles/carometroStyles.css">
+        <script src="./script/carometroScript.js" defer></script>
+    </head>
+
+    <body style="height: 10rem;">
+        <header>
+            <a id="logoHeader" href="index.html"><img src="./assets/imagens/logo_setec.png" alt="Logo_setec"></a>
+
+            <nav id="conteudoHeader">
+                <ul class="listaMenu">
+                    <li><a href="index.html">Sobre Nós</a></li>
+                    <li><a href="index.html">Ultímas Cotas</a></li>
+                    <li><a href="index.html">Edições Passadas</a></li>
+                    <li><a href="index.html">Contato</a></li>
+                </ul>
+
+                <button onclick="AbrirPopup()">Participe</button>
+            </nav>
+
+            <div id="hamburguerMenu">
+                <input class="checkbox-toggle" type="checkbox" aria-label="Abrir menu de navegação" />
+                <div class="hamburger">
+                    <div></div>
+                </div>
+
+                <div class="menu">
+                    <div>
+                        <div class="hamb_logo">
+                            <img src="./assets/imagens/logo_setec.png" alt="logo_setec_hamburguer">
+                        </div>
+
+                        <div>
+                            <ul>
+                                <li><a href="index.html">Sobre Nós</a></li>
+                                <li><a href="index.html">Ultímas Cotas</a></li>
+                                <li><a href="index.html">Edições Passadas</a></li>
+                                <li><a href="index.html">Contato</a></li>
+                            </ul>
+
+                            <button onclick="AbrirPopup()">Participe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="fundoPopup1">
+            <di class="popupInscricao">
+                <button class="fecharPopupInscricao" onclick="fecharPopup()">x</button>
+
+                <p>A inscrição é feita pelo link na bio do nosso Instagram</p>
+
+                <button class="abrirInsta" onclick="abrirInta()">Abrir Intagram</button>
+            </div>
+        </div>
+
+        <div id="fundoPopup2">
+            <di class="popupInscricao">
+                <button class="fecharPopupInscricao" onclick="fecharPopup()">x</button>
+
+                <p>Infelizmente a Semana Temática já ocorreu! Espere pela próxima edição!!</p>
+                <p>Fique ligado no nosso inta para saber das novidades</p>
+
+                <button class="abrirInsta" onclick="abrirInta()">Abrir insta</button>
+            </div>
+        </div>
+
+        <section id="section1">
+            <div id="titulo">
+                <div class="containerTitulo">
+                    <div class="barraAmarela"></div>
+                    <h4 style="color: #ffe800;">Equipe e Gestões</h4>
+                    <h2>Quem Faz a SeTEC?</h2>
+                    <p>
+                        Conheça as pessoas que tornam a Semana TEMÁTICA <br>
+                        de Engenharia Civil possível!
+                    </p>
+                </div>
+
+                <div class="curvaCima"> 
+                    <svg viewBox="0 0 1440 230" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M 0 220 C 314 179 322 186 605 208 C 690 208 1123 258 1441 187 V 231 H 0 V 200" fill="#3a1367"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <div id="seletorGestao">
+                <div class="seletorAnos">
+                    <label>Selecione a gestão: </label>
+                    <div class="containerAnos">
+                        <!-- Conteudo inserido no JS -->
+                    </div>
+                </div>
+
+                <div class="containerCoordenacao">
+                    <h4>Coordenações</h4>
+                    <div class="barraAmarela"></div>
+                    <div class="cardCoordenacao">
+                        <!-- Conteudo inserido no JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section2">
+            <div id="coordenacao">
+                <div class="parteTexto">
+                    <!-- Conteudo inserido no JS -->
+                </div>
+
+                <div class="pessoas">
+                    <div class="coordenadores">
+                        <div class="textoCoordenacao">
+                            <div class="containerTextoCoordenacao">
+                                <img src="./assets/Icons/iconGeral.png" alt="iconGeral">
+                            </div>
+                            <h5>Coordenadores</h5>
+                        </div>
+
+                        <div class="cardImagensCoord">
+                            <!-- Conteudo inserido no JS -->
+                        </div>
+                    </div>
+
+                    <div class="analistas">
+                        <div class="textoAnalistas">
+                            <div class="containerTextoAnalistas">
+                                <img src="./assets/Icons/iconGeral.png" alt="iconGeral">
+                            </div>
+                            <h5>Analistas</h5>
+                        </div>
+
+                        <div class="cardImagensAnalista">
+                            <!-- Conteudo inserido no JS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="rodape">
+
+                <div class="container1">
+                    <div class="logoFooter" onclick="window.location.href='/index.html'">
+                        <img src="./assets/imagens/logo_setec.png" alt="Logo SeTEC">
+                    </div>
+
+                    <div class="redesSociais">
+                        <a href="https://www.instagram.com/setecpoli/" aria-label="Instagram">
+                            <img src="./assets/Icons/instagram.png" alt="Instagram">
+                        </a>
+
+                        <a href="https://www.facebook.com/setecpoli/?locale=pt_BR" aria-label="facebook">
+                            <img src="./assets/Icons/facebook.png"alt="Facebook">
+                        </a>
+
+                        <a href="https://www.linkedin.com/company/setecpoli/?originalSubdomain=br" aria-label="LinkedIn">
+                            <img src="./assets/Icons/linkedin.png"alt="LinkedIn">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="container2">
+                    <label>SeTEC - Semana Temática de Engenharia Civil</label>
+                    <br>
+                    <label>
+                        CEC
+                        <span style="color: #ffe800;">|</span>
+                        Centro Acadêmico de Engenharia Civil
+                    </label>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
