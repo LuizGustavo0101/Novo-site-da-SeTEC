@@ -24,7 +24,11 @@ header {
   background-color: #3a1367;
   color: white;
   height: 70px;
+<<<<<<< HEAD
   z-index: 4;
+=======
+  z-index: 1;
+>>>>>>> a7421d72acce8a4242fa3a88c6b8454b9fcefdbb
 }
 header #logoHeader {
   position: relative;
@@ -404,6 +408,7 @@ header #hamburguerMenu .menu > div > div button:hover {
   transition: 0.5s;
 }
 
+<<<<<<< HEAD
 #section1 {
   background-color: white;
   display: flex;
@@ -684,6 +689,8 @@ header #hamburguerMenu .menu > div > div button:hover {
   box-shadow: 0 0 10px 1px #7a3fb0;
 }
 
+=======
+>>>>>>> a7421d72acce8a4242fa3a88c6b8454b9fcefdbb
 footer {
   background-color: #351a4a;
   width: 100%;
@@ -812,6 +819,7 @@ footer .rodape .container2 label {
   header #conteudoHeader button {
     margin: 0;
   }
+<<<<<<< HEAD
   section #titulo .containerTitulo {
     padding: 1rem 7rem 20px 7rem;
   }
@@ -830,11 +838,14 @@ footer .rodape .container2 label {
   section #seletorGestao .containerCoordenacao {
     padding: 0rem calc(7rem - 0px) 20px 7rem;
   }
+=======
+>>>>>>> a7421d72acce8a4242fa3a88c6b8454b9fcefdbb
 }
 @media (max-width: 425px) {
   header #logoHeader {
     margin: 0px auto;
   }
+<<<<<<< HEAD
   section #titulo .containerTitulo {
     padding: 1rem 30px 20px 5rem;
   }
@@ -844,4 +855,6 @@ footer .rodape .container2 label {
   section #seletorGestao .containerCoordenacao {
     padding: 1rem 7rem 20px 5rem;
   }
+=======
+>>>>>>> a7421d72acce8a4242fa3a88c6b8454b9fcefdbb
 }/*# sourceMappingURL=carometroStyles.css.map */

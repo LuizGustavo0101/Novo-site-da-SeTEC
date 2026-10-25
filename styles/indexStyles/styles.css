@@ -856,6 +856,7 @@ header #hamburguerMenu .menu > div > div button:hover {
 }
 #sec6 .empresas .grid-empresas {
   flex: 2;
+<<<<<<< HEAD
   display: flex;
   flex-wrap: wrap;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -864,6 +865,12 @@ header #hamburguerMenu .menu > div > div button:hover {
 #sec6 .empresas .grid-empresas > div {
   flex: 1 1 140px;
 }
+=======
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+}
+>>>>>>> a7421d72acce8a4242fa3a88c6b8454b9fcefdbb
 #sec6 .empresas .grid-empresas .cartao-empresa {
   background-color: #F4ECFA;
   border-radius: 16px;
@@ -938,16 +945,24 @@ header #hamburguerMenu .menu > div > div button:hover {
 }
 #sec7 .ultimaEdicao .imagensEdicoes {
   display: flex;
+<<<<<<< HEAD
   flex-wrap: wrap;
   gap: 20px;
   max-width: 800px;
+=======
+  gap: 20px;
+>>>>>>> a7421d72acce8a4242fa3a88c6b8454b9fcefdbb
 }
 #sec7 .ultimaEdicao .imagensEdicoes .card1, #sec7 .ultimaEdicao .imagensEdicoes .card2, #sec7 .ultimaEdicao .imagensEdicoes .card3 {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
+<<<<<<< HEAD
   max-width: auto;
+=======
+  max-width: 300px;
+>>>>>>> a7421d72acce8a4242fa3a88c6b8454b9fcefdbb
   height: 160px;
   border-radius: 12px;
   padding: 20px;
@@ -956,7 +971,10 @@ header #hamburguerMenu .menu > div > div button:hover {
   flex-direction: column;
   justify-content: flex-end;
   align-items: stretch;
+<<<<<<< HEAD
   flex: 1;
+=======
+>>>>>>> a7421d72acce8a4242fa3a88c6b8454b9fcefdbb
 }
 #sec7 .ultimaEdicao .imagensEdicoes .card1 .container, #sec7 .ultimaEdicao .imagensEdicoes .card2 .container, #sec7 .ultimaEdicao .imagensEdicoes .card3 .container {
   display: flex;
@@ -1279,7 +1297,11 @@ footer .rodape .container2 label {
     flex-direction: column;
   }
   #sec4 .quemOrganiza .imagemSec4 .imagem {
+<<<<<<< HEAD
     max-width: 230px;
+=======
+    max-width: 300px;
+>>>>>>> a7421d72acce8a4242fa3a88c6b8454b9fcefdbb
   }
   #sec4 .quemOrganiza .imagemSec4 .cec {
     margin-left: 30px;
@@ -1305,7 +1327,11 @@ footer .rodape .container2 label {
     flex-direction: column;
   }
   #sec5 .edicaoPassada .imagemSec5 .imagem {
+<<<<<<< HEAD
     max-width: 230px;
+=======
+    max-width: 300px;
+>>>>>>> a7421d72acce8a4242fa3a88c6b8454b9fcefdbb
   }
   #sec6 .empresas {
     flex-direction: column;
@@ -1313,6 +1339,7 @@ footer .rodape .container2 label {
   #sec6 .empresas .container .grid-empresas {
     grid-template-columns: repeat(2, 1fr);
   }
+<<<<<<< HEAD
   #sec7 {
     padding: 0px 20px 0px 0px;
   }
@@ -1329,6 +1356,13 @@ footer .rodape .container2 label {
   }
   #sec8 .fazerParte {
     padding: 0 4rem 0 4rem;
+=======
+  #sec7 .ultimaEdicao {
+    padding: 0px 4rem 6rem 5rem;
+  }
+  #sec8 .fazerParte {
+    padding: 0px 0px 0px 7rem;
+>>>>>>> a7421d72acce8a4242fa3a88c6b8454b9fcefdbb
   }
 }
 @media (max-width: 425px) {
