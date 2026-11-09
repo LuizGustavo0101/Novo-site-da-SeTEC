@@ -24,7 +24,7 @@ header {
   background-color: #3a1367;
   color: white;
   height: 70px;
-  z-index: 1;
+  z-index: 4;
 }
 header #logoHeader {
   position: relative;
@@ -404,6 +404,286 @@ header #hamburguerMenu .menu > div > div button:hover {
   transition: 0.5s;
 }
 
+#section1 {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  margin-top: 70px;
+  position: relative;
+  overflow: hidden;
+}
+#section1 #titulo {
+  margin-top: -1px;
+}
+#section1 #titulo .containerTitulo {
+  padding: 1rem 7rem 20px 11rem;
+  flex: 1;
+  background-color: #3a1367;
+}
+#section1 #titulo .containerTitulo .barraAmarela {
+  width: 30px;
+  height: 2px;
+  background-color: #ffe800;
+  margin: 30px 0px 20px 0px;
+  transform: scale(2) translateX(7px);
+  height: 2px;
+}
+#section1 #titulo .containerTitulo h4 {
+  font-size: 20px;
+  margin-top: -10px;
+}
+#section1 #titulo .containerTitulo h2 {
+  font-size: 34px;
+  color: white;
+}
+#section1 #titulo .containerTitulo h2 span {
+  color: #ffe800;
+}
+#section1 #titulo .containerTitulo p {
+  color: white;
+  line-height: 22px;
+  margin-top: 5px;
+}
+#section1 #titulo .containerTitulo button {
+  padding: 8px 26px;
+  border-radius: 5rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #3a1367;
+  background-color: #ffe800;
+}
+#section1 #titulo .containerTitulo button:hover {
+  cursor: pointer;
+  filter: brightness(90%);
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+#section1 #titulo .containerTitulo button {
+  margin-top: 15px;
+}
+#section1 #titulo .containerTitulo button img {
+  width: 10px;
+  margin-left: 10px;
+}
+#section1 #titulo .curvaCima {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+#section1 #titulo .curvaCima svg {
+  display: block;
+  width: 100%;
+  height: 100px;
+}
+#section1 #seletorGestao {
+  padding-top: 2rem;
+  z-index: 1;
+}
+#section1 #seletorGestao .seletorAnos {
+  padding: 0rem 7rem 20px 11rem;
+  display: flex;
+  gap: 10px;
+  color: #3a1367;
+  font-weight: bold;
+  align-items: center;
+}
+#section1 #seletorGestao .seletorAnos label {
+  flex-shrink: 0;
+}
+#section1 #seletorGestao .seletorAnos .containerAnos {
+  display: flex;
+  gap: 20px;
+}
+#section1 #seletorGestao .seletorAnos .containerAnos button {
+  border-radius: 10rem;
+  padding: 6px 30px;
+  color: #3a1367;
+  font-weight: 500;
+}
+#section1 #seletorGestao .seletorAnos .containerAnos button:hover {
+  cursor: pointer;
+}
+#section1 #seletorGestao .seletorAnos .containerAnos .ativo {
+  background-color: #ffe800;
+  border-bottom: 1px solid #3a1367;
+  font-weight: bold;
+}
+#section1 #seletorGestao .seletorAnos .containerAnos .desativo {
+  border: 1px solid #3a1367;
+  background-color: transparent;
+}
+#section1 #seletorGestao .containerCoordenacao {
+  padding: 0rem 7rem 20px 11rem;
+  display: flex;
+  flex-direction: column;
+}
+#section1 #seletorGestao .containerCoordenacao h4 {
+  font-weight: bold;
+  color: #3a1367;
+  font-size: 24px;
+}
+#section1 #seletorGestao .containerCoordenacao .barraAmarela {
+  width: 30px;
+  height: 2px;
+  background-color: #ffe800;
+  margin: 30px 0px 20px 0px;
+  transform: scale(2) translateX(10px);
+  width: 40px;
+  height: 2px;
+  margin: 10px 0 30px 0;
+}
+#section1 #seletorGestao .containerCoordenacao .cardCoordenacao {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+#section1 #seletorGestao .containerCoordenacao .cardCoordenacao button {
+  flex: 1 1 250px;
+  border-radius: 10px;
+  padding: 15px 20px;
+  color: #3a1367;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+#section1 #seletorGestao .containerCoordenacao .cardCoordenacao button:hover {
+  cursor: pointer;
+}
+#section1 #seletorGestao .containerCoordenacao .cardCoordenacao button div {
+  background-color: #3a1367;
+  border-radius: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 10px;
+}
+#section1 #seletorGestao .containerCoordenacao .cardCoordenacao button div img {
+  width: 25px;
+  height: 25px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#section1 #seletorGestao .containerCoordenacao .cardCoordenacao button p {
+  font-size: 16px;
+}
+#section1 #seletorGestao .containerCoordenacao .cardCoordenacao button img {
+  width: 14px;
+  margin-left: auto;
+}
+#section1 #seletorGestao .containerCoordenacao .cardCoordenacao .ativo {
+  background-color: #ffe800;
+  border-bottom: 1px solid #3a1367;
+  font-weight: bold;
+}
+#section1 #seletorGestao .containerCoordenacao .cardCoordenacao .desativo {
+  border: 1px solid #3a1367;
+  background-color: transparent;
+}
+
+#section2 {
+  background-color: #F4ECFA;
+}
+#section2 #coordenacao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0px 50px 0px;
+}
+#section2 #coordenacao .parteTexto {
+  text-align: center;
+}
+#section2 #coordenacao .parteTexto h4 {
+  color: #3a1367;
+  font-weight: bold;
+  font-size: 24px;
+}
+#section2 #coordenacao .parteTexto p {
+  color: #3a1367;
+  margin-top: 4px;
+}
+#section2 #coordenacao .pessoas {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#section2 #coordenacao .pessoas .coordenadores, #section2 #coordenacao .pessoas .analistas {
+  border: 1px solid rgba(58, 19, 103, 0.3764705882);
+  padding: 15px 20px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#section2 #coordenacao .pessoas .coordenadores .textoCoordenacao, #section2 #coordenacao .pessoas .coordenadores .textoAnalistas, #section2 #coordenacao .pessoas .analistas .textoCoordenacao, #section2 #coordenacao .pessoas .analistas .textoAnalistas {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#section2 #coordenacao .pessoas .coordenadores .textoCoordenacao .containerTextoCoordenacao, #section2 #coordenacao .pessoas .coordenadores .textoCoordenacao .containerTextoAnalistas, #section2 #coordenacao .pessoas .coordenadores .textoAnalistas .containerTextoCoordenacao, #section2 #coordenacao .pessoas .coordenadores .textoAnalistas .containerTextoAnalistas, #section2 #coordenacao .pessoas .analistas .textoCoordenacao .containerTextoCoordenacao, #section2 #coordenacao .pessoas .analistas .textoCoordenacao .containerTextoAnalistas, #section2 #coordenacao .pessoas .analistas .textoAnalistas .containerTextoCoordenacao, #section2 #coordenacao .pessoas .analistas .textoAnalistas .containerTextoAnalistas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  background-color: #3a1367;
+  border-radius: 2rem;
+}
+#section2 #coordenacao .pessoas .coordenadores .textoCoordenacao .containerTextoCoordenacao img, #section2 #coordenacao .pessoas .coordenadores .textoCoordenacao .containerTextoAnalistas img, #section2 #coordenacao .pessoas .coordenadores .textoAnalistas .containerTextoCoordenacao img, #section2 #coordenacao .pessoas .coordenadores .textoAnalistas .containerTextoAnalistas img, #section2 #coordenacao .pessoas .analistas .textoCoordenacao .containerTextoCoordenacao img, #section2 #coordenacao .pessoas .analistas .textoCoordenacao .containerTextoAnalistas img, #section2 #coordenacao .pessoas .analistas .textoAnalistas .containerTextoCoordenacao img, #section2 #coordenacao .pessoas .analistas .textoAnalistas .containerTextoAnalistas img {
+  width: 20px;
+}
+#section2 #coordenacao .pessoas .coordenadores .textoCoordenacao h5, #section2 #coordenacao .pessoas .coordenadores .textoAnalistas h5, #section2 #coordenacao .pessoas .analistas .textoCoordenacao h5, #section2 #coordenacao .pessoas .analistas .textoAnalistas h5 {
+  font-weight: bold;
+  color: #3a1367;
+  font-size: 18px;
+}
+#section2 #coordenacao .pessoas .coordenadores .cardImagensCoord, #section2 #coordenacao .pessoas .coordenadores .cardImagensAnalista, #section2 #coordenacao .pessoas .analistas .cardImagensCoord, #section2 #coordenacao .pessoas .analistas .cardImagensAnalista {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+#section2 #coordenacao .pessoas .coordenadores .cardImagensCoord .card, #section2 #coordenacao .pessoas .coordenadores .cardImagensAnalista .card, #section2 #coordenacao .pessoas .analistas .cardImagensCoord .card, #section2 #coordenacao .pessoas .analistas .cardImagensAnalista .card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  max-width: 100px;
+}
+#section2 #coordenacao .pessoas .coordenadores .cardImagensCoord .card .fotoPessoas img, #section2 #coordenacao .pessoas .coordenadores .cardImagensAnalista .card .fotoPessoas img, #section2 #coordenacao .pessoas .analistas .cardImagensCoord .card .fotoPessoas img, #section2 #coordenacao .pessoas .analistas .cardImagensAnalista .card .fotoPessoas img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+#section2 #coordenacao .pessoas .coordenadores .cardImagensCoord .card .informacoes, #section2 #coordenacao .pessoas .coordenadores .cardImagensAnalista .card .informacoes, #section2 #coordenacao .pessoas .analistas .cardImagensCoord .card .informacoes, #section2 #coordenacao .pessoas .analistas .cardImagensAnalista .card .informacoes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 20px;
+  border-radius: 10px;
+  margin-top: -20px;
+  background-color: #ffe800;
+}
+#section2 #coordenacao .pessoas .coordenadores .cardImagensCoord .card .informacoes label, #section2 #coordenacao .pessoas .coordenadores .cardImagensAnalista .card .informacoes label, #section2 #coordenacao .pessoas .analistas .cardImagensCoord .card .informacoes label, #section2 #coordenacao .pessoas .analistas .cardImagensAnalista .card .informacoes label {
+  font-weight: bold;
+  color: #3a1367;
+  font-size: 12px;
+}
+#section2 #coordenacao .pessoas .coordenadores .cardImagensCoord .card .informacoes p, #section2 #coordenacao .pessoas .coordenadores .cardImagensAnalista .card .informacoes p, #section2 #coordenacao .pessoas .analistas .cardImagensCoord .card .informacoes p, #section2 #coordenacao .pessoas .analistas .cardImagensAnalista .card .informacoes p {
+  color: #3a1367;
+  font-size: 10px;
+}
+#section2 #coordenacao .pessoas .coordenadores .cardImagensCoord .card:hover, #section2 #coordenacao .pessoas .coordenadores .cardImagensAnalista .card:hover, #section2 #coordenacao .pessoas .analistas .cardImagensCoord .card:hover, #section2 #coordenacao .pessoas .analistas .cardImagensAnalista .card:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: 0.4s;
+  box-shadow: 0 0 10px 1px #7a3fb0;
+}
+
 footer {
   background-color: #351a4a;
   width: 100%;
@@ -532,9 +812,36 @@ footer .rodape .container2 label {
   header #conteudoHeader button {
     margin: 0;
   }
+  section #titulo .containerTitulo {
+    padding: 1rem 7rem 20px 7rem;
+  }
+  section #seletorGestao .seletorAnos {
+    padding: 0rem calc(7rem - 0px) 20px 7rem;
+    flex-direction: column;
+    align-items: baseline;
+  }
+  section #seletorGestao .seletorAnos .containerAnos {
+    padding: 10px 0px 0px 20px;
+    flex-wrap: wrap;
+  }
+  section #seletorGestao .seletorAnos .containerAnos button {
+    flex: 0 1 90px;
+  }
+  section #seletorGestao .containerCoordenacao {
+    padding: 0rem calc(7rem - 0px) 20px 7rem;
+  }
 }
 @media (max-width: 425px) {
   header #logoHeader {
     margin: 0px auto;
+  }
+  section #titulo .containerTitulo {
+    padding: 1rem 30px 20px 5rem;
+  }
+  section #seletorGestao .seletorAnos {
+    padding: 1rem 7rem 20px 5rem;
+  }
+  section #seletorGestao .containerCoordenacao {
+    padding: 1rem 7rem 20px 5rem;
   }
 }/*# sourceMappingURL=carometroStyles.css.map */

@@ -1,0 +1,165 @@
+{
+    "gestao2026":{
+        "ano": 2026,
+        "equipe": [{
+            "geral": {
+                "coordenacao": {
+                    "1": {
+                        "Nome": "Sara Gomes",
+                        "img": "https://kuusd65orasjele9.public.blob.vercel-storage.com/carometro/2026/geral/imgSaraBarbosa.jpg"
+                    },
+                    "2": {
+                        "Nome": "Tiago Barbosa",
+                        "img": "https://kuusd65orasjele9.public.blob.vercel-storage.com/carometro/2026/geral/imgTiago.jpg"
+                    }
+                },
+                "analistas": {}
+            },
+            "comercial": {
+                "coordenacao": {
+                    "1": {
+                        "Nome": "Clarisse",
+                        "img": "https://kuusd65orasjele9.public.blob.vercel-storage.com/carometro/2026/comercial/imgClarisse.jpg"
+                    },
+                    "2": {
+                        "Nome": "Lucas",
+                        "img": "https://kuusd65orasjele9.public.blob.vercel-storage.com/carometro/2026/comercial/imgLucas.jpg"
+                    }
+                },
+                "analistas": {
+                    "1": {
+                        "Nome": "Luis Otávio",
+                        "img": "https://kuusd65orasjele9.public.blob.vercel-storage.com/carometro/2026/comercial/imgLuisOtavio.jpg"
+                    },
+                    "2": {
+                        "Nome": "Pedro Dias",
+                        "img": "https://kuusd65orasjele9.public.blob.vercel-storage.com/carometro/2026/comercial/imgPedroDias.jpg"
+                    },
+                    "3": {
+                        "Nome": "Pedro Müller",
+                        "img": "https://kuusd65orasjele9.public.blob.vercel-storage.com/carometro/2026/comercial/imgPedroMuller.jpg"
+                    }
+                }
+            },
+            "marketing": {
+                "coordenacao": {
+                    "1": {
+                        "Nome": "João Pedro",
+                        "img": "https://kuusd65orasjele9.public.blob.vercel-storage.com/carometro/2026/marketing/imgJoao.jpg"
+                    },
+                    "2": {
+                        "Nome": "Luiz",
+                        "img": "https://kuusd65orasjele9.public.blob.vercel-storage.com/carometro/2026/marketing/imgLuiz.jpg"
+                    },
+                    "3": {
+                        "Nome": "Murilo",
+                        "img": "https://kuusd65orasjele9.public.blob.vercel-storage.com/carometro/2026/marketing/imgMurilo.jpg"
+                    }
+                },
+                "analistas": {
+                    "1": {
+                        "Nome": "Agatha",
+                        "img": "https://kuusd65orasjele9.public.blob.vercel-storage.com/carometro/2026/marketing/imgAgatha.jpg"
+                    },
+                    "2": {
+                        "Nome": "Hugo",
+                        "img": "https://kuusd65orasjele9.public.blob.vercel-storage.com/carometro/2026/marketing/imgHugo.jpg"
+                    },
+                    "3": {
+                        "Nome": "Isabela",
+                        "img": "https://kuusd65orasjele9.public.blob.vercel-storage.com/carometro/2026/marketing/imgIsabela.jpg"
+                    },
+                    "4": {
+                        "Nome": "Leonardo",
+                        "img": "https://kuusd65orasjele9.public.blob.vercel-storage.com/carometro/2026/marketing/imgLeonardo.jpg"
+                    },
+                    "5": {
+                        "Nome": "Victor",
+                        "img": "https://kuusd65orasjele9.public.blob.vercel-storage.com/carometro/2026/marketing/imgVictor.jpg"
+                    }
+                }
+            },
+            "redesECultura": {
+                "coordenacao": {
+                    "1": {
+                        "Nome": "Laura",
+                        "img": "https://kuusd65orasjele9.public.blob.vercel-storage.com/carometro/2026/redes/imgLaura.jpg"
+                    }
+                },
+                "analistas": {
+                    "1": {
+                        "Nome": "Bruno",
+                        "img": "https://kuusd65orasjele9.public.blob.vercel-storage.com/carometro/2026/redes/imgBruno.jpg"
+                    },
+                    "2": {
+                        "Nome": "Ezequiel",
+                        "img": "https://kuusd65orasjele9.public.blob.vercel-storage.com/carometro/2026/redes/imgEzequiel.jpg"
+                    },
+                    "3": {
+                        "Nome": "Isabella Carvalho",
+                        "img": "https://kuusd65orasjele9.public.blob.vercel-storage.com/carometro/2026/redes/imgIsabelaCarvalho.jpg"
+                    },
+                    "4": {
+                        "Nome": "João Pedro",
+                        "img": "https://kuusd65orasjele9.public.blob.vercel-storage.com/carometro/2026/redes/imgPerfeitinha.jpg"
+                    },
+                    "5": {
+                        "Nome": "Maria Luiza",
+                        "img": "https://kuusd65orasjele9.public.blob.vercel-storage.com/carometro/2026/redes/imgMaria.jpg"
+                    },
+                    "6": {
+                        "Nome": "Pedro Mendes",
+                        "img": "https://kuusd65orasjele9.public.blob.vercel-storage.com/carometro/2026/redes/imgPedroMendes.jpg"
+                    }
+                }
+            },
+            "infraestrutura": {
+                "coordenacao": {
+                    "1": {
+                        "Nome": "João Paulo",
+                        "img": "https://kuusd65orasjele9.public.blob.vercel-storage.com/carometro/2026/infraestrutura/imgJota.jpg"
+                    }
+                },
+                "analistas": {
+                    "1": {
+                        "Nome": "João Marcos",
+                        "img": "https://kuusd65orasjele9.public.blob.vercel-storage.com/carometro/2026/infraestrutura/imgJoaoMarcos.jpg"
+                    },
+                    "2": {
+                        "Nome": "Kauan",
+                        "img": "https://kuusd65orasjele9.public.blob.vercel-storage.com/carometro/2026/infraestrutura/imgKauan.jpg"
+                    },
+                    "3": {
+                        "Nome": "Nicolas",
+                        "img": "https://kuusd65orasjele9.public.blob.vercel-storage.com/carometro/2026/infraestrutura/imgNicolas.jpg"
+                    },
+                    "4": {
+                        "Nome": "Rian",
+                        "img": "https://kuusd65orasjele9.public.blob.vercel-storage.com/carometro/2026/infraestrutura/imgRian.jpg"
+                    },
+                    "5": {
+                        "Nome": "Sara Magrini",
+                        "img": "https://kuusd65orasjele9.public.blob.vercel-storage.com/carometro/2026/infraestrutura/imgSara.jpg"
+                    },
+                    "6": {
+                        "Nome": "Sarah de Almeida",
+                        "img": "https://kuusd65orasjele9.public.blob.vercel-storage.com/carometro/2026/infraestrutura/imgSarah.jpg"
+                    }
+                }
+            },
+            "financeiro": {
+                "coordenacao": {
+                    "1": {
+                        "Nome": "Gustavo",
+                        "img": "https://kuusd65orasjele9.public.blob.vercel-storage.com/carometro/2026/financeiro/imgGustavo.png"
+                    },
+                    "2": {
+                        "Nome": "João Paulo",
+                        "img": "https://kuusd65orasjele9.public.blob.vercel-storage.com/carometro/2026/financeiro/imgJota.jpg"
+                    }
+                },
+                "analistas": {}
+            }
+        }]
+    }
+}
