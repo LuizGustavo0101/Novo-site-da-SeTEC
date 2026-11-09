@@ -587,6 +587,7 @@ header #hamburguerMenu .menu > div > div button:hover {
 
 #section2 {
   background-color: #F4ECFA;
+  padding: 0px 20px;
 }
 #section2 #coordenacao {
   display: flex;
@@ -618,6 +619,8 @@ header #hamburguerMenu .menu > div > div button:hover {
   border-radius: 15px;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  flex: 1;
   gap: 20px;
 }
 #section2 #coordenacao .pessoas .coordenadores .textoCoordenacao, #section2 #coordenacao .pessoas .coordenadores .textoAnalistas, #section2 #coordenacao .pessoas .analistas .textoCoordenacao, #section2 #coordenacao .pessoas .analistas .textoAnalistas {
@@ -644,6 +647,7 @@ header #hamburguerMenu .menu > div > div button:hover {
 }
 #section2 #coordenacao .pessoas .coordenadores .cardImagensCoord, #section2 #coordenacao .pessoas .coordenadores .cardImagensAnalista, #section2 #coordenacao .pessoas .analistas .cardImagensCoord, #section2 #coordenacao .pessoas .analistas .cardImagensAnalista {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }
@@ -651,12 +655,15 @@ header #hamburguerMenu .menu > div > div button:hover {
   display: flex;
   flex-direction: column;
   border-radius: 15px;
-  max-width: 100px;
+  width: 100px;
+  flex: 0 0 100px;
 }
 #section2 #coordenacao .pessoas .coordenadores .cardImagensCoord .card .fotoPessoas img, #section2 #coordenacao .pessoas .coordenadores .cardImagensAnalista .card .fotoPessoas img, #section2 #coordenacao .pessoas .analistas .cardImagensCoord .card .fotoPessoas img, #section2 #coordenacao .pessoas .analistas .cardImagensAnalista .card .fotoPessoas img {
   border-radius: 10px;
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #section2 #coordenacao .pessoas .coordenadores .cardImagensCoord .card .informacoes, #section2 #coordenacao .pessoas .coordenadores .cardImagensAnalista .card .informacoes, #section2 #coordenacao .pessoas .analistas .cardImagensCoord .card .informacoes, #section2 #coordenacao .pessoas .analistas .cardImagensAnalista .card .informacoes {
   display: flex;
@@ -666,6 +673,7 @@ header #hamburguerMenu .menu > div > div button:hover {
   padding: 8px 20px;
   border-radius: 10px;
   margin-top: -20px;
+  height: 30px;
   background-color: #ffe800;
 }
 #section2 #coordenacao .pessoas .coordenadores .cardImagensCoord .card .informacoes label, #section2 #coordenacao .pessoas .coordenadores .cardImagensAnalista .card .informacoes label, #section2 #coordenacao .pessoas .analistas .cardImagensCoord .card .informacoes label, #section2 #coordenacao .pessoas .analistas .cardImagensAnalista .card .informacoes label {
@@ -812,22 +820,22 @@ footer .rodape .container2 label {
   header #conteudoHeader button {
     margin: 0;
   }
-  section #titulo .containerTitulo {
-    padding: 1rem 7rem 20px 7rem;
+  #section1 #titulo .containerTitulo {
+    padding: 1rem 7rem 20px 4rem;
   }
-  section #seletorGestao .seletorAnos {
+  #section1 #seletorGestao .seletorAnos {
     padding: 0rem calc(7rem - 0px) 20px 7rem;
     flex-direction: column;
     align-items: baseline;
   }
-  section #seletorGestao .seletorAnos .containerAnos {
+  #section1 #seletorGestao .seletorAnos .containerAnos {
     padding: 10px 0px 0px 20px;
     flex-wrap: wrap;
   }
-  section #seletorGestao .seletorAnos .containerAnos button {
+  #section1 #seletorGestao .seletorAnos .containerAnos button {
     flex: 0 1 90px;
   }
-  section #seletorGestao .containerCoordenacao {
+  #section1 #seletorGestao .containerCoordenacao {
     padding: 0rem calc(7rem - 0px) 20px 7rem;
   }
 }
@@ -835,13 +843,13 @@ footer .rodape .container2 label {
   header #logoHeader {
     margin: 0px auto;
   }
-  section #titulo .containerTitulo {
-    padding: 1rem 30px 20px 5rem;
+  #section1 {
+    display: flex;
+    align-items: center;
   }
-  section #seletorGestao .seletorAnos {
-    padding: 1rem 7rem 20px 5rem;
-  }
-  section #seletorGestao .containerCoordenacao {
-    padding: 1rem 7rem 20px 5rem;
+  #section2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }/*# sourceMappingURL=carometroStyles.css.map */

@@ -659,6 +659,7 @@ header {
 
 #section2{
     background-color: $corfundo;
+    padding: 0px 20px;
 
     #coordenacao{
         display: flex;
@@ -693,6 +694,8 @@ header {
                 border-radius: 15px;
                 display: flex;
                 flex-direction: column;
+                flex-wrap: wrap;
+                flex: 1;
                 gap: 20px;
 
                 .textoCoordenacao, .textoAnalistas{
@@ -723,6 +726,7 @@ header {
 
                 .cardImagensCoord, .cardImagensAnalista{
                     display: flex;
+                    flex-wrap: wrap;
                     justify-content: center;
                     gap: 20px;
 
@@ -730,13 +734,15 @@ header {
                         display: flex;
                         flex-direction: column;
                         border-radius: 15px;
-                        max-width: 100px;
+                        width: 100px;
+                        flex: 0 0 100px;
 
                         .fotoPessoas{
                             img{
                                 border-radius: 10px;
                                 width: 100%;
                                 height: 100%;
+                                object-fit: cover;
                             }
                         }
 
@@ -748,6 +754,7 @@ header {
                             padding: 8px 20px;
                             border-radius: 10px;
                             margin-top: -20px;
+                            height: 30px;
                             background-color: $amarelo;
 
                             label{
@@ -936,10 +943,10 @@ footer {
         }
     }
 
-    section{
+    #section1{
         #titulo{
             .containerTitulo{
-                padding: 1rem $espacamentoPadraoDireita 20px calc($espacamentoPadraoEsquerda - 4rem);
+                padding: 1rem $espacamentoPadraoDireita 20px calc($espacamentoPadraoEsquerda - 7rem);
             }
         }
 
@@ -973,21 +980,14 @@ footer {
         }
     }
 
-    section{
-        #titulo{
-            .containerTitulo{
-                padding: 1rem 30px 20px calc($espacamentoPadraoEsquerda - 6rem);
-            }
-        }
+    #section1{
+        display: flex;
+        align-items: center;
+    }
 
-        #seletorGestao{
-            .seletorAnos{
-                padding: 1rem $espacamentoPadraoDireita 20px calc($espacamentoPadraoEsquerda - 6rem);
-            }
-
-            .containerCoordenacao{
-                padding: 1rem $espacamentoPadraoDireita 20px calc($espacamentoPadraoEsquerda - 6rem);
-            }
-        }
+    #section2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
