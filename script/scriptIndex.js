@@ -1,8 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
     const menuToggle = document.querySelector(".checkbox-toggle");
+    const atualizarScroll = () => {
+        const valor = menuToggle && menuToggle.checked ? "hidden" : "";
+        document.documentElement.style.overflow = valor;
+        document.body.style.overflow = valor;
+    };
+
+    if (menuToggle) {
+        menuToggle.addEventListener("change", atualizarScroll);
+    }
+
     document.querySelectorAll("#hamburguerMenu .menu a").forEach((link) => {
         link.addEventListener("click", () => {
-            if (menuToggle) menuToggle.checked = false;
+            if (menuToggle) {
+                menuToggle.checked = false;
+                atualizarScroll();
+            }
         });
     });
 
@@ -24,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         empresas.forEach(empresa => {
             todosOsCartoes += `
-                <div class="cartao-empresa" onclick="window.open('${empresa.link}')">
+                <div class="cartao-empresa" onclick="window.open('${empresa.link}', '_blank')">
                     <div class="logo-container">
                         <img src="${empresa.logo}" alt="Logo da ${empresa.nome}">
                     </div>
