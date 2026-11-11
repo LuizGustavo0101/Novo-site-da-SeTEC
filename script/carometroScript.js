@@ -196,6 +196,7 @@ function criarCardPessoa(pessoa) {
     const imagem = document.createElement("img");
     imagem.src = pessoa.img || "./assets/imagens/foto-padrao.png";
     imagem.alt = pessoa.Nome;
+    imagem.loading = "lazy"
     imagem.onerror = function() {
         this.onerror = null;
         this.src = "./assets/imagens/foto-padrao.png";
